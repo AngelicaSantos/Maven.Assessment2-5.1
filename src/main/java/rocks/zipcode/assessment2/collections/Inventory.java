@@ -18,13 +18,15 @@ public class Inventory {
      */
     public Inventory() {
 
+
     }
 
     /**
      * @param item - increment the number of this item in stock by 1
      */
     public void addItemToInventory(String item) {
-        return;
+
+
     }
 
     /**
