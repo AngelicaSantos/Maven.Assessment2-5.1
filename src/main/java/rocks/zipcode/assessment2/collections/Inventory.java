@@ -1,5 +1,6 @@
 package rocks.zipcode.assessment2.collections;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -8,19 +9,26 @@ import java.util.List;
 public class Inventory {
 
 
+   // instance variable
+    private List<String> list;
+
+
     /**
      * @param strings list of strings to add / remove / fetch from
      */
+    //need to create a list of strings
     public Inventory(List<String> strings) {
 
-
+        list = new LinkedList<>();
+        list.addAll(strings);
     }
 
     /**
      * nullary constructor initializes a new list
      */
     public Inventory() {
-
+// new list initialized
+    list=new LinkedList<>();
 
 
     }
@@ -30,6 +38,7 @@ public class Inventory {
      */
     public void addItemToInventory(String item) {
 
+        list.add(item);
 
     }
 
@@ -37,7 +46,8 @@ public class Inventory {
      * @param item - decrement the number of this item in stock by 1
      */
     public void removeItemFromInventory(String item) {
-        return;
+
+        list.remove(item);
     }
 
     /**
@@ -45,6 +55,9 @@ public class Inventory {
      * @return - return the number of items
      */
     public Integer getItemQuantity(String item) {
-        return null;
+
+       return list.size();
+
+
     }
 }
